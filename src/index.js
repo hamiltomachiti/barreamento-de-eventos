@@ -8,7 +8,7 @@ app.post("/eventos", async(req, res) => {
     const evento = req.body;
     eventos.push(evento)
         //envia o evento para o microsserviço de lembretes
-    axios.post("http://127.0.0.1:4000/eventos", evento)
+    axios.post("http://192.168.200.100:4000/eventos", evento)
         .catch((err) => {
             console.log("err", err);
         });
